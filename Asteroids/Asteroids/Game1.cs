@@ -11,6 +11,7 @@ namespace Asteroids
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        GraphicsDevice device;
 
         public Game1()
         {
@@ -41,6 +42,12 @@ namespace Asteroids
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
+            device = graphics.GraphicsDevice;
+            graphics.PreferredBackBufferWidth = 800;
+            graphics.PreferredBackBufferHeight = 600;
+            graphics.IsFullScreen = false;
+            graphics.ApplyChanges();
+            Window.Title = "Asteroids 3D";
         }
 
         /// <summary>
