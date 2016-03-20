@@ -51,7 +51,7 @@ namespace Asteroids
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
-            device = graphics.GraphicsDevice;
+            ship = Content.Load<Model>("karenspaceship");
         }
 
         /// <summary>
